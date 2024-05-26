@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MajorTom - Torhymne</title>
+    <link rel="stylesheet" href="/style.css">
+    <script src="/src/title.js"></script>
+    <script src="/src/score.js"></script>
+    <script src="/src/blink.js"></script>
+    <script src="/src/countdown.js"></script>
+</head>
+<body onLoad="blink('divider', 1000);">
+    <div class="welcome">
+        <h3></h3>
+    </div>
+    <h3>Zeit bis zum nächsten Deutschland - Spiel:</h3>
+    <div class="countdown">
+        <figure>
+            <h1 id="cd_days">06</h1>
+            <figcaption>Tage</figcaption>
+        </figure>
+        <h1 class="divider">:</h1>
+        <figure>
+            <h1 id="cd_hours">13</h1>
+            <figcaption>Stunden</figcaption>
+        </figure>
+        <h1 class="divider">:</h1>
+        <figure>
+            <h1 id="cd_minutes">12</h1>
+            <figcaption>Minuten</figcaption>
+        </figure>
+        <h1 class="divider">:</h1>
+        <figure>
+            <h1 id="cd_seconds">11</h1>
+            <figcaption>Sekunden</figcaption>
+        </figure>
+    </div>
+    <div class="matchname">
+        <div class="team"><h1>Deutschland</h1></div>
+        <div class="vs"><h1>vs.</h1></div>
+        <div class="team"><h1>Ukraine</h1></div>
+    </div>
+</body>
+</html>

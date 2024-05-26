@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deutschland vs. Gegner</title>
+    <link rel="stylesheet" href="/game.css">
+    <script src="/src/title.js"></script>
+    <script src="/src/score.js"></script>
+    <script src="/src/blink.js"></script>
+    <script src="/src/playtime.js"></script>
+</head>
+<body onLoad="blink('divider', 1000); updatePlaytime(0,0), setCustomTitle('cusotm')">
+    <div class="playtime">
+        <h2 id="playtime_min">69</h2>
+        <h2 class="divider">:</h2>
+        <h2 id="playtime_sec">00</h2>
+    </div>
+    <div class="score">
+        <figure>
+            <h1 id="score_ger">2</h1>
+            <figcaption>Deutschland</figcaption>
+        </figure>
+        <h1 class="divider">:</h1>
+        <figure>
+            <h1 id="score_opp">0</h1>
+            <figcaption id="name_opp">Ungarn</figcaption>
+        </figure>
+    </div>
+    <div class = "celebration" id="celebration">
+        <figure>
+            <h1>TOOOOOOOOOOOOR!!!!</h1>
+            <figcaption><h2>für Deutschland!</h2></figcaption>
+        </figure>
+    </div>
+    <div class="explanation">
+        <p>Wenn du diese Seite auf einem PC aufrufst, kannst du sie ohne Probleme im Hintergrung geöffnet lassen.</p>
+        <p>Solltest du auf einem Handy sein, lasse die Seite bitte im Vordergrund geöffnet.</p>
+    </div>
+    <script>
+        updateScoreOPP("tet")
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css?family=Jost&display=swap/css?family=Muli&display=swap');
+body{
+    font-family: Jost;
+    background: linear-gradient(-45deg, rgba(0, 0, 0, 0.774), red, yellow);
+    background-size: 1000% 1000%;
+    animation: gradient 10s ease infinite;
+    align-items: center;
+    text-align: center;
+}
+.countdown{
+    align-items: center;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 150%;
+}
+.matchname{
+    align-items: center;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+.team,  .vs {
+    margin: 1em
+}
+@keyframes gradient {
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
