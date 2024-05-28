@@ -5,10 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Deutschland vs. Gegner</title>
     <link rel="stylesheet" href="/game.css">
-    <script src="/src/title.js"></script>
-    <script src="/src/score.js"></script>
-    <script src="/src/blink.js"></script>
-    <script src="/src/playtime.js"></script>
 </head>
 <body onLoad="blink('divider', 1000); updatePlaytime(0,0), setCustomTitle('cusotm')">
     <div class="playtime">
@@ -37,8 +33,14 @@
         <p>Wenn du diese Seite auf einem PC aufrufst, kannst du sie ohne Probleme im Hintergrung geöffnet lassen.</p>
         <p>Solltest du auf einem Handy sein, lasse die Seite bitte im Vordergrund geöffnet.</p>
     </div>
-    <script>
-        updateScoreOPP("tet")
-    </script>
+    <audio id="mt_normal" src="/audio/MajorTom_clear.mp3"></audio>
+    <audio id="mt_stadium" src="/audio/MajorTom_stadium.mp3"></audio>
+    <audio id="scream" src="/audio/goalscream.mp3"></audio>
+    <script src="/src/title.js"></script>
+    <script src="/src/score.js"></script>
+    <script src="/src/blink.js"></script>
+    <script src="/src/playtime.js"></script>
+    <script src="src/hymne.js"></script>
+    <script src="/src/websocket.js"></script>
 </body>
 </html>
