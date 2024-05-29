@@ -8,6 +8,7 @@ socket.onopen = function(event) {
 };
 
 socket.onmessage = function(event) {
+    console.log('Message received:', event.data);  // Debug print
     const message = JSON.parse(event.data);
 
     // Check if the message type is 'score_update'
@@ -17,19 +18,31 @@ socket.onmessage = function(event) {
         for (const team in scores) {
             if (scores.hasOwnProperty(team)) {
                 const currentScore = scores[team];
-                const previousScore = previousScores[team] || 0; // Default to 0 if no previous score
-
-                if (currentScore !== previousScore && team === "Fortuna Düsseldorf") {
+                const previousScore = previousScores[team] || 0; 
+                //If Germany sores:
+                if (currentScore !== previousScore && team === "Germany") {
                     console.log(`Germany scored! Previous score: ${previousScore}, Current score: ${currentScore}`);
                     playHymne("stadium");
                     updateScoreGER(currentScore);
+                }
+                //If the opponent scores:
+                else if (currentScore !== previousScore && team !== "Germany"){
+                    updateScoreOPP(currentScore);
                 }
 
                 // Update the previous score
                 previousScores[team] = currentScore;
             }
         }
-    } else {
+    } 
+    if (message.type === 'playtime_update') {
+        // Extract the 'long' value from the message data
+        const playtimeData = message.data;
+        const short = playtimeData.short;
+        updatePlaytime(short)
+        console.log(`Playtime updated: ${short}`);
+    }
+    else {
         console.log('Unknown message type:', message.type);
     }
 };

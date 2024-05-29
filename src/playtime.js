@@ -1,7 +1,5 @@
 //tested: WORKING
-function updatePlaytime(min, sec){
-    divmin = document.getElementById('playtime_min');
-    divsec = document.getElementById('playtime_sec');
-    divmin.innerHTML = min;
-    divsec.innerHTML = sec;
+function updatePlaytime(time){
+    short = document.getElementById("playtime_short");
+    short.innerHTML = time;
 }
