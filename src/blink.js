@@ -17,7 +17,7 @@ function blink_ltd(elementClass, speed, duration) {
     }, blink_speed);
     
     setTimeout(function(){
-        clearInterval(t); // Stop blinking after duration
+        clearInterval(t);
         var element = document.getElementsByClassName(elementClass);
         for (var i = 0; i < element.length; i++) {
             element[i].style.visibility = 'visible';
