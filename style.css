@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Jost&display=swap/css?family=Muli&display=swap');
 body{
     font-family: Jost;
-    background: linear-gradient(-45deg, rgba(0, 0, 0, 0.774), red, yellow);
+    background: linear-gradient(-45deg, rgba(0, 0, 0), red, yellow);
     background-size: 1000% 1000%;
     animation: gradient 10s ease infinite;
     align-items: center;
