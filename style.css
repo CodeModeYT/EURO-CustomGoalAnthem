@@ -6,6 +6,7 @@ body{
     animation: gradient 10s ease infinite;
     align-items: center;
     text-align: center;
+    overflow: auto;
 }
 .countdown{
     align-items: center;

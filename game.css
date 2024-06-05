@@ -10,6 +10,7 @@ body{
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    overflow: auto;
 }
 .score{
     align-items: center;
@@ -26,6 +27,18 @@ body{
     text-align: center;
     display: flex;
     justify-content: center;
+    overflow: auto;
+}
+.autoplaymsg{
+    align-items: center;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 13vh;
+    overflow: auto;
 }
 .playtime{
     align-items: center;
