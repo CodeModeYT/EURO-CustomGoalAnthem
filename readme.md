@@ -9,7 +9,23 @@ This simple website plays Major Tom by Peter Schiling as goal song whenever Germ
 <a href="https://www.buymeacoffee.com/codemodeyt">Suppport this project!</a>
 
 ## Usage
-Coming soon!
+Just open the website on https://www.codemodeyt.github.io/EURO-CustomGoalAnthem
+
+### During the game:
+During the game, you can simply keep the page open in the background (on PC) or in the foreground (on mobile) and you just have to wait for a goal to happen.
+There will be a live score that automatically updates every 3 seconds and the live minute count that will update every minute.
+As soon as there is a goal for Germany, the hymne will automatically start to play.
+
+*Make sure to have automatic playback of media enabled in your Browser! OTHERWISE, THE ANTHEM CAN'T BE PLAYED!*
+
+**If you experience any issues, reload the page. If this doesn't fix it, please open an Issue!**
+
+
+### If the game is not running yet:
+There will be a countdown to the time the game starts. As soon as the game has started, you will get automatically redirected to the game page:
+
+
+
 
 ## The way it works
 Coming soon!
