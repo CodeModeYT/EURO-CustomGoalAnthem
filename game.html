@@ -27,8 +27,28 @@
             <figcaption><h2>für Deutschland!</h2></figcaption>
         </figure>
     </div>
-    <p class="autoplaymsg">Bitte stelle sicher, dass die automatische Wiedergabe von Medien in deinem Browser aktiviert ist!</p>
-    <div class="explanation">
+    <div class="settings" id="settings">
+        <figure>
+            <label class="switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+            </label>
+            <figcaption>
+                <p>Stadioneffekt</p>
+            </figcaption>
+        </figure>
+        <figure>
+            <label class="switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+            </label>
+            <figcaption>
+                <p>Torschrei</p>
+            </figcaption>
+        </figure>
+    </div>
+    <p class="autoplaymsg" id="autoplaymsg">Bitte stelle sicher, dass die automatische Wiedergabe von Medien in deinem Browser aktiviert ist!</p>
+    <div class="explanation" id="explanation">
         <p>Wenn du diese Seite auf einem PC aufrufst, kannst du sie ohne Probleme im Hintergrund geöffnet lassen.</p>
         <p>Solltest du auf einem Handy sein, lasse die Seite bitte im Vordergrund geöffnet.</p>
     </div>
@@ -39,9 +59,10 @@
     <script src="/src/blink.js"></script>
     <script src="/src/score.js"></script>
     <script src="/src/playtime.js"></script>
-    <script src="src/hymne.js"></script>
+    <script src="/src/hymne.js"></script>
     <script src="/src/websocket.js"></script>
-    <script src="src/celebration.js"></script>
-    <script src="src/countdown.js"></script>
+    <script src="/src/celebration.js"></script>
+    <script src="/src/countdown.js"></script>
+    <script src="/src/settings.js"></script>
 </body>
 </html>

@@ -1,0 +1,7 @@
+function toggleGoalscream(){
+
+}
+
+function toggleStadiumEffect(){
+    
+}
