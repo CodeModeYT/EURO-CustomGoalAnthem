@@ -22,7 +22,7 @@ socket.onmessage = function(event) {
                 //If Germany sores:
                 if (currentScore !== previousScore && team === "Germany") {
                     console.log(`Germany scored! Previous score: ${previousScore}, Current score: ${currentScore}`);
-                    playHymne("stadium");
+                    playHymne()
                     updateScoreGER(currentScore);
                     celebrate(10000);
                 }
