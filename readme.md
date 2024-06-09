@@ -25,10 +25,10 @@ As soon as there is a goal for Germany, the hymne will automatically start to pl
 There will be a countdown to the time the game starts. As soon as the game has started, you will get automatically redirected to the game page:
 
 
-
-
 ## The way it works
-Coming soon!
+In the backend, a Python script checks for a change in score every 3 seconds and updates the playtime every minute.
+
+As soon as theres an update in playtime / score, it gets sent to the frontend by using a websocket.
 
 ## Backstory
 In the lead-up to UEFA EURO 2024 in Germany, a big wave of fan enthusiasm swept across the country, sparked by an Adidas commercial. The fans passionately wanted Peter Schilling's "Major Tom" to be the official goal anthem during the tournament. The German Football Association (DFB) even gave it a trial run in a subsequent friendly match. However, UEFA dashed those hopes by announcing that all teams would have the same goal anthem during EURO 2024, sticking to this decision despite several successful petitions.
