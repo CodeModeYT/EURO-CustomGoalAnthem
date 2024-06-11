@@ -5,9 +5,9 @@ from public.getMinute import get_current_minute
 
 async def notify(websocket, path):
     print("Client connected.")
-    match_id = 4450056
+    match_id = 4043837
     home_team = "Germany"
-    away_team = "Greece"
+    away_team = "Scotland"
 
     try:
         monitor_task = asyncio.create_task(monitorScore(match_id, home_team, away_team, websocket))
