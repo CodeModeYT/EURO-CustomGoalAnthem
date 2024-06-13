@@ -9,7 +9,7 @@ This simple website plays Major Tom by Peter Schiling as goal song whenever Germ
 <a href="https://www.buymeacoffee.com/codemodeyt">Suppport this project!</a>
 
 ## Usage
-Just open the website on https://www.codemodeyt.github.io/EURO-CustomGoalAnthem
+Just open the website on <!--https://www.codemodeyt.github.io/EURO-CustomGoalAnthem--> https://euro-cga.netlify.app/
 
 ### During the game:
 During the game, you can simply keep the page open in the background (on PC) or in the foreground (on mobile) and you just have to wait for a goal to happen.
