@@ -131,6 +131,18 @@ input:checked + .slider:before {
   .slider.round:before {
     border-radius: 50%;
   } 
+
+@media (max-width: 1270px) {
+    .autoplaymsg {
+        display: none;
+    }
+}
+@media (max-width: 670px) {
+    .explanation {
+        display: none;
+    }
+}
+
 @keyframes gradient {
     0%{
         background-position: 0% 50%;

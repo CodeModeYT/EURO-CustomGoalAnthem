@@ -90,6 +90,19 @@ a{
     border-top: 0.5px solid rgba(255, 255, 255, 0.462);
 }
 
+@media (max-height: 723px) {
+    .footer {
+        display: none;
+    }
+}
+
+@media (max-width: 930px) {
+    .footer {
+        display: none;
+    }
+}
+
+
 @keyframes gradient {
     0%{
         background-position: 0% 50%;
