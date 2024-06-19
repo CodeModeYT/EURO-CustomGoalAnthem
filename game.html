@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Deutschland vs. Ungarn</title>
     <link rel="stylesheet" href="/game.css">
+    <script defer data-domain="euro-cga.netlify.app" src="https://plausible.io/js/script.js"></script>
 </head>
-<body onLoad="blink('divider', 1000); //checkRedirect('2024-06-19T18:00:00');">
+<body onLoad="blink('divider', 1000); checkRedirect('2024-06-19T18:00:00');">
     <div class="playtime">
         <h1 id="playtime_short">Spiel läuft derzeit nicht</h1>
     </div>
@@ -30,7 +31,7 @@
     <div class="settings" id="settings">
         <figure>
             <label class="switch">
-                <input type="checkbox" id="fx_switch">
+                <input type="checkbox" id="fx_switch" checked>
                 <span class="slider round"></span>
             </label>
             <figcaption>
@@ -39,7 +40,7 @@
         </figure>
         <figure>
             <label class="switch">
-                <input type="checkbox" id="scrm_switch">
+                <input type="checkbox" id="scrm_switch" checked>
                 <span class="slider round"></span>
             </label>
             <figcaption>
