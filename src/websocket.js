@@ -1,7 +1,7 @@
 const socket = new WebSocket('ws://localhost:8765');
 
-let previousScores = {
-};
+let previousScores = {};
+let initialLoad = sessionStorage.getItem('initialLoad') === null;  // Check if initialLoad is set in sessionStorage
 
 socket.onopen = function(event) {
     console.log('WebSocket connection established.');
@@ -18,32 +18,46 @@ socket.onmessage = function(event) {
         for (const team in scores) {
             if (scores.hasOwnProperty(team)) {
                 const currentScore = scores[team];
-                const previousScore = previousScores[team] || 0; 
-                //If Germany sores:
-                if (currentScore !== previousScore && team === "Germany") {
-                    console.log(`Germany scored! Previous score: ${previousScore}, Current score: ${currentScore}`);
-                    playHymne()
-                    updateScoreGER(currentScore);
-                    celebrate(10000);
-                }
-                //If the opponent scores:
-                else if (currentScore !== previousScore && team !== "Germany"){
-                    updateScoreOPP(currentScore);
+                const previousScore = previousScores[team] || 0;
+                if (initialLoad) {
+                    if (team === "Germany") {
+                        updateScoreGER(currentScore, false);
+                    } else {
+                        updateScoreOPP(currentScore, false);
+                    }
+                } else {
+                    // If Germany scores:
+                    if (currentScore !== previousScore && team === "Germany") {
+                        console.log(`Germany scored! Previous score: ${previousScore}, Current score: ${currentScore}`);
+                        playHymne();
+                        updateScoreGER(currentScore);
+                        celebrate(10000);
+                    }
+                    // If the opponent scores:
+                    else if (currentScore !== previousScore && team !== "Germany") {
+                        updateScoreOPP(currentScore);
+                    }
                 }
 
                 // Update the previous score
                 previousScores[team] = currentScore;
             }
         }
-    } 
+
+        // Set initialLoad to false after processing the initial data and store in sessionStorage
+        if (initialLoad) {
+            sessionStorage.setItem('initialLoad', 'true');
+            initialLoad = false;
+        }
+    }
+
     if (message.type === 'playtime_update') {
-        // Extract the 'long' value from the message data
+        // Extract the 'short' value from the message data
         const playtimeData = message.data;
         const short = playtimeData.short;
-        updatePlaytime(short)
+        updatePlaytime(short);
         console.log(`Playtime updated: ${short}`);
-    }
-    else {
+    } else {
         console.log('Unknown message type:', message.type);
     }
 };
