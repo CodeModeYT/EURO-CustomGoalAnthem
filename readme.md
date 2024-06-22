@@ -11,6 +11,9 @@ This simple website plays Major Tom by Peter Schiling as goal song whenever Germ
 ## Usage
 Just open the website on <!--https://www.codemodeyt.github.io/EURO-CustomGoalAnthem--> https://euro-cga.netlify.app/
 
+**Please note: currently, the automatic playback of the hymne is NOT WORKING on MOBILE!**
+*This is due to most mobile browsers blocking automatic media playpack. A solution is currently in development.*
+
 ### During the game:
 During the game, you can simply keep the page open in the background (on PC) or in the foreground (on mobile) and you just have to wait for a goal to happen.
 There will be a live score that automatically updates every 3 seconds and the live minute count that will update every minute.
