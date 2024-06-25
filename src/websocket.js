@@ -1,4 +1,4 @@
-const socket = new WebSocket('ws://localhost:8765');
+const socket = new WebSocket('wss://localhost:8765');
 
 let previousScores = {};
 let initialLoad = sessionStorage.getItem('initialLoad') === null;  // Check if initialLoad is set in sessionStorage
@@ -32,6 +32,11 @@ socket.onmessage = function(event) {
                         playHymne();
                         updateScoreGER(currentScore);
                         celebrate(10000);
+                        // If the device is a phone, start the alternative way of playing the anthem for phones
+                        if (isPhone()){
+                            showPopup();
+                            disableScroll();
+                        }
                     }
                     // If the opponent scores:
                     else if (currentScore !== previousScore && team !== "Germany") {

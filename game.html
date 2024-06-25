@@ -8,6 +8,16 @@
     <script defer data-domain="euro-cga.netlify.app" src="https://plausible.io/js/script.js"></script>
 </head>
 <body onLoad="blink('divider', 1000); checkRedirect('2024-06-23T21:00:00');">
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <div onclick="playHymne(); hidePopup(); enableScroll();">
+                <h1 style="font-weight: bold;">Tippe hier, um die Hymne abzuspielen!</h1>
+                <p>Wegen seltsamen Vorschriften seitens der Handyhersteller ist dies leider auf Handys nicht automatisch möglich.</p>
+                <p style="font-weight: bold;">Rufe diese Website für die beste Erfahrung auf einem PC auf!</p>
+            </div>  
+        </div>
+    </div>
     <div class="playtime">
         <h1 id="playtime_short">Spiel läuft derzeit nicht</h1>
     </div>
@@ -56,6 +66,8 @@
     <audio id="mt_normal" src="/audio/MajorTom_clear.mp3"></audio>
     <audio id="mt_stadium" src="/audio/MajorTom_stadium.mp3"></audio>
     <audio id="scream" src="/audio/goalscream.mp3"></audio>
+    <script src="/src/manageScroll.js"></script>
+    <script src="/src/popup.js"></script>
     <script src="/src/title.js"></script>
     <script src="/src/blink.js"></script>
     <script src="/src/score.js"></script>
