@@ -26,17 +26,21 @@ socket.onmessage = function(event) {
                         updateScoreOPP(currentScore, false);
                     }
                 } else {
-                    // If Germany scores:
-                    if (currentScore !== previousScore && team === "Germany") {
+                    // If Germany scores and the score has increased:
+                    if (currentScore > previousScore && team === "Germany") {
                         console.log(`Germany scored! Previous score: ${previousScore}, Current score: ${currentScore}`);
                         playHymne();
                         updateScoreGER(currentScore);
                         celebrate(10000);
                         // If the device is a phone, start the alternative way of playing the anthem for phones
-                        if (isPhone()){
+                        if (isPhone()) {
                             showPopup();
                             disableScroll();
                         }
+                    }
+                    // If Germany's score decreased or stayed the same, just update the score without celebrating
+                    else if (currentScore <= previousScore && team === "Germany") {
+                        updateScoreGER(currentScore, false);
                     }
                     // If the opponent scores:
                     else if (currentScore !== previousScore && team !== "Germany") {
