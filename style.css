@@ -115,8 +115,14 @@ a{
 }
 
 @media (max-width: 367px) {
-    .countdown, .matchname{
+    .countdown{
         font-size: 80%;
+    }
+}
+
+@media (max-width: 400px) {
+    .matchname{
+        font-size: 70%;
     }
 }
 

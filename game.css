@@ -178,7 +178,16 @@ input:checked + .slider:before {
         display: none;
     }
 }
-
+@media (max-height: 680px) {
+    .settings{
+        margin-bottom: 2em;
+    }
+}
+@media (max-height: 600px) {
+    .settings{
+        margin-bottom: 0em;
+    }
+}
 @keyframes gradient {
     0%{
         background-position: 0% 50%;
