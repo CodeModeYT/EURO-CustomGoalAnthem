@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css?family=Jost&display=swap/css?family=Muli&display=swap');
+body{
+    font-family: Jost;
+    color: whitesmoke;
+    background: linear-gradient(-45deg, rgba(0, 157, 255, 0.774), rgb(0, 225, 255), rgb(87, 90, 255));
+    background-size: 1000% 1000%;
+    animation: gradient 10s ease infinite;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    margin-left: 10%;
+}
+.fbutton {
+    position: relative;
+    border: 2px solid rgba(245, 245, 245, 0);
+    border-radius: 12px;
+    background-color: #fffdfd00;
+    color: #FFFFFF;
+    font-size: 15px;
+    width: 20em;
+    height: 2em;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+.fbutton span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.fbutton span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.fbutton:hover span {
+    padding-right: 25px;
+}
+
+.fbutton:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+a{
+    color: whitesmoke;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.header{
+    color: whitesmoke;
+    font-weight: bolder;
+    font-size: 130%;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+.media_upload a{
+    font-weight: bold;
+    margin-bottom: 10em;
+}
+
+.upload_item {
+    margin-bottom: 1em; 
+}
+
+.footer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+    gap: 5px;
+    color: whitesmoke;
+    padding: 50px 0;
+    text-align: center; 
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    border-top: 0.5px solid rgba(255, 255, 255, 0.462);
+}
+
+@media (max-height: 723px) {
+    .footer {
+        display: none;
+    }
+}
+
+@media (max-width: 930px) {
+    .footer {
+        display: none;
+    }
+}
+
+@keyframes gradient {
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
