@@ -13,16 +13,28 @@
     </div>
     <div class="media_upload">
         <div class="upload_item">
-            <a>Torhymne: </a> <input type="file" name="file" accept=".mp3, .wav, .ogg">
+            <label for="preset1"><h3>Torhymne: </h3></label>
+            <select id="preset1">
+                <option value="preset_torhymne.mp3">Major Tom</option>
+                <option value="none">eigene Datei</option>
+            </select>
+            <input type="file" id="file1" name="file1" accept=".mp3, .wav, .ogg" style="display:none;">
         </div>
         <div class="upload_item">
-            <a>Torschrei: </a> <input type="file" name="file" accept=".mp3, .wav, .ogg"> 
+            <label for="preset2"><h3>Torschrei: </h3></label>
+            <select id="preset2">
+                <option value="preset_torschrei.mp3">Beispiel Torschrei</option>
+                <option value="none">eigene Datei</option>
+            </select>
+            <input type="file" id="file2" name="file2" accept=".mp3, .wav, .ogg" style="display:none;">
         </div>
     </div>
+
     <div class="footer">
         <a href="https://github.com/CodeModeYT/EURO-CustomGoalAnthem">GitHub</a>
         <button class="fbutton" style="vertical-align:middle" onclick="location.href = `https://www.buymeacoffee.com/codemodeyt`;"><span><a>Unterstütze dieses Projekt! </a></span></button>
         <a href="https://github.com/CodeModeYT/EURO-CustomGoalAnthem/issues/new">Fehler melden</a>
     </div>
+    <script src="/src/toggleMediaUpload.js"></script>
 </body>
 </html>
