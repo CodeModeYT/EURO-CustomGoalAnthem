@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/settings.css">
     <script defer data-domain="euro-cga.netlify.app" src="https://plausible.io/js/script.js"></script>
 </head>
-<body>
+<body onload="loadDefault()">
     <div class="header">
         <h1>Einstellungen</h1>
     </div>
@@ -18,7 +18,7 @@
                 <select id="preset1" onchange="toggleFileInput(this, 'file1')" class="selector">
                     <option value="/audio/MajorTom_stadium.mp3">Major Tom (Stadionversion)</option>
                     <option value="/audio/MajorTom_clear.mp3">Major Tom (Normal)</option>
-                    <option value="none">eigene Datei</option>
+                    <option value="none">eigene Datei (Upload)</option>
                 </select>
                 <input type="file" id="file1" name="file1" accept=".mp3, .wav, .ogg" style="display:none;">
                 <label for="file1" class="fileLabel" id="label1" style="display:none;">Datei auswählen</label>
@@ -27,7 +27,7 @@
                 <label for="preset2"><h1>Torschrei:</h1></label>
                 <select id="preset2" onchange="toggleFileInput(this, 'file2')" class="selector">
                     <option value="/audio/goalscream.mp3">Beispiel Torschrei</option>
-                    <option value="none">eigene Datei</option>
+                    <option value="none">eigene Datei (Upload)</option>
                 </select>
                 <input type="file" id="file2" name="file2" accept=".mp3, .wav, .ogg" style="display:none;">
                 <label for="file2" class="fileLabel" id="label2" style="display:none;">Datei auswählen</label>
@@ -42,5 +42,6 @@
         <a href="https://github.com/CodeModeYT/EURO-CustomGoalAnthem/issues/new">Fehler melden</a>
     </div>
     <script src="/src/toggleMediaUpload.js"></script>
+    <script src="/src/selector.js"></script>
 </body>
 </html>
