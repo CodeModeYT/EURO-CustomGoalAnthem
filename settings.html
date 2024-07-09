@@ -11,24 +11,30 @@
     <div class="header">
         <h1>Einstellungen</h1>
     </div>
-    <div class="media_upload">
-        <div class="upload_item">
-            <label for="preset1"><h3>Torhymne: </h3></label>
-            <select id="preset1">
-                <option value="preset_torhymne.mp3">Major Tom</option>
-                <option value="none">eigene Datei</option>
-            </select>
-            <input type="file" id="file1" name="file1" accept=".mp3, .wav, .ogg" style="display:none;">
-        </div>
-        <div class="upload_item">
-            <label for="preset2"><h3>Torschrei: </h3></label>
-            <select id="preset2">
-                <option value="preset_torschrei.mp3">Beispiel Torschrei</option>
-                <option value="none">eigene Datei</option>
-            </select>
-            <input type="file" id="file2" name="file2" accept=".mp3, .wav, .ogg" style="display:none;">
+    <div class="settings_cnt">
+        <div class="media_upload">
+            <div class="upload_item">
+                <label for="preset1"><h1>Torhymne:</h1></label>
+                <select id="preset1" onchange="toggleFileInput(this, 'file1')" class="selector">
+                    <option value="/audio/MajorTom_stadium.mp3">Major Tom (Stadionversion)</option>
+                    <option value="/audio/MajorTom_clear.mp3">Major Tom (Normal)</option>
+                    <option value="none">eigene Datei</option>
+                </select>
+                <input type="file" id="file1" name="file1" accept=".mp3, .wav, .ogg" style="display:none;">
+                <label for="file1" class="fileLabel" id="label1" style="display:none;">Datei auswählen</label>
+            </div>
+            <div class="upload_item">
+                <label for="preset2"><h1>Torschrei:</h1></label>
+                <select id="preset2" onchange="toggleFileInput(this, 'file2')" class="selector">
+                    <option value="/audio/goalscream.mp3">Beispiel Torschrei</option>
+                    <option value="none">eigene Datei</option>
+                </select>
+                <input type="file" id="file2" name="file2" accept=".mp3, .wav, .ogg" style="display:none;">
+                <label for="file2" class="fileLabel" id="label2" style="display:none;">Datei auswählen</label>
+            </div>
         </div>
     </div>
+    
 
     <div class="footer">
         <a href="https://github.com/CodeModeYT/EURO-CustomGoalAnthem">GitHub</a>
