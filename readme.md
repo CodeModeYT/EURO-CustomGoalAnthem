@@ -11,7 +11,7 @@ This simple website plays Major Tom by Peter Schiling as goal song whenever Germ
 ## It's over. 
 Germany is out. 
 
-There is a version in planning, that will allow the user to chose the match and team and even the goal anthem! It will require the user to run the server script locally though. Stay tuned. 
+There is a version in planning, that will allow the user to chose the match and team and even the goal anthem! It will require the user to run the (originally) server-side Python script locally though. Stay tuned. 
 
 ## Usage
 Just open the website on <!--https://www.codemodeyt.github.io/EURO-CustomGoalAnthem--> https://euro-cga.netlify.app/
