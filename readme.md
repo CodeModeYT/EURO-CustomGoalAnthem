@@ -4,15 +4,16 @@
 </p>
 
 # EURO24: Custom goal anthem (Major Tom)
-This simple website plays Major Tom by Peter Schiling as goal song whenever Germany scores during the EURO24 in Germany.
+This was a simple website that played Major Tom by Peter Schiling as goal song whenever Germany scored during the EURO24 in Germany.
 
 <a href="https://www.buymeacoffee.com/codemodeyt">Suppport this project!</a>
 
-## It's over. 
-Germany is out. 
+I stopped developing on this project, but you can still use it if you host it locally.
 
-There is a version in planning, that will allow the user to chose the match and team and even the goal anthem! It will require the user to run the (originally) server-side Python script locally though. Stay tuned. 
+<details>
+    <summary>Expand to see how it worked during the EUROs</summary>
 
+   
 ## Usage
 Just open the website on <!--https://www.codemodeyt.github.io/EURO-CustomGoalAnthem--> https://euro-cga.netlify.app/
 
@@ -43,3 +44,4 @@ Excited about the upcoming tournament, I decided to take matters into my own han
 <!-- #### UPDATE:
 On the 1st of June, the DFB announced Major Tom as their new official goal anthem.
 This does NOT affect the EUROs though, as the UEFA still holds on to their plan with every team having the same pre-set goal anthem. -->
+</details>
