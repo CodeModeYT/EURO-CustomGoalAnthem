@@ -1,13 +1,22 @@
 import asyncio
 import websockets
+import json
 from public.monitorScore import monitorScore
 from public.getMinute import get_current_minute
 
+with open('config\match.json') as config_file:
+    try:
+        config = json.load(config_file)
+        print("Config loaded successfully:")
+        print(config)
+    except json.JSONDecodeError as e:
+        print("Error loading config.json:", e)
+
 async def notify(websocket, path):
     print("Client connected.")
-    match_id = 0000000
-    home_team = "Germany"
-    away_team = ""
+    match_id = config['id']
+    home_team = config['home']
+    away_team = config['away']
 
     try:
         monitor_task = asyncio.create_task(monitorScore(match_id, home_team, away_team, websocket))
