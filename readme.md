@@ -8,7 +8,7 @@ This was a simple website that played Major Tom by Peter Schiling as goal song w
 
 <a href="https://www.buymeacoffee.com/codemodeyt">Suppport this project!</a>
 
-I stopped developing on this project, but you can still use it if you host it locally.
+I stopped developing on this project, but you can still use it if you host the (originally server-side) scripts locally.
 
 <details>
     <summary>Expand to see how it worked during the EUROs</summary>
